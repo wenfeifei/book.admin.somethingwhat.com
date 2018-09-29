@@ -110,7 +110,7 @@ class Detail extends Component {
               <Description term="更新时间">{resByGetSingleById.Update_Time}</Description>
               <Description term="喵币">
                 <span className={`${styles.fontWeightX} ${styles.padding_right_20}`}>{resByGetSingleById.Currency}</span>
-                <Link target='_blank' to={`/book/user-recharge-list?openid=${resByGetSingleById.Openid}`}>查看充值(赠送)记录</Link>
+                <Link target='_blank' to={`/book/user-recharge-list.html?openid=${resByGetSingleById.Openid}`}>查看充值(赠送)记录</Link>
               </Description>
               {/* <Description term="阅读时长(分钟)">{resByGetSingleById.Read_Minute}</Description> */}
             </DescriptionList>
@@ -123,11 +123,11 @@ class Detail extends Component {
                 <Description className={styles.newline} term="阅读时长">{resByGetBookSummary.DurationExplain}</Description>
                 <Description className={styles.newline} term="阅读记录">
                   <span className={styles.padding_right_20}>共{resByGetBookSummary.BookRecordCount}本书{resByGetBookSummary.ChapterRecordCount}章节</span>
-                  <Link target='_blank' to={`/book/book-readrecord-list?openid=${resByGetSingleById.Openid}`}>查看详细</Link>
+                  <Link target='_blank' to={`/book/book-readrecord-list.html?openid=${resByGetSingleById.Openid}`}>查看详细</Link>
                 </Description>
                 <Description className={styles.newline} term="收藏书本">
                   <span className={styles.padding_right_20}>{resByGetBookSummary.CollectionCount}本</span>
-                  <Link target='_blank' to={`/book/book-collections-list?openid=${resByGetSingleById.Openid}`}>查看详细</Link>
+                  <Link target='_blank' to={`/book/book-collections-list.html?openid=${resByGetSingleById.Openid}`}>查看详细</Link>
                 </Description>
               </div>
             )}
