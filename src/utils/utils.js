@@ -48,12 +48,22 @@ export function getTimeDistance(type) {
     ];
   }
 
-  if (type > 0) {
+  if (type >= 0) {
     now.setHours(0);
     now.setMinutes(0);
     now.setSeconds(0);
 
     const beginTime = now.getTime() - type * oneDay;
+
+    return [moment(beginTime), moment(now.getTime())];
+  }
+
+  if (type < 0) {
+    now.setHours(0);
+    now.setMinutes(0);
+    now.setSeconds(0);
+
+    const beginTime = now.getTime() + type * oneDay;
 
     return [moment(beginTime), moment(now.getTime())];
   }

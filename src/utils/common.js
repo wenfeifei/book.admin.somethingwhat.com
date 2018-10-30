@@ -10,17 +10,22 @@ export function getVersionCategory(Referer) {
     const { groups } = Referer.match('servicewechat\\.com\\/(?<appid>.*?)/(?<version>.*?)/page-frame\\.html');
     if (groups) {
       const { appid, version } = groups
-      switch (version) {
-        case 'devtools':
-        default:
-          html = '开发版'
-          break;
-        case '0':
-          html = '体验版'
-          break;
-        case '1':
-          html = '正式版本'
-          break;
+      if (version > 0) {
+        html = '正式版本'
+      }
+      else {
+        switch (version) {
+          case 'devtools':
+          default:
+            html = '开发版'
+            break;
+          case '0':
+            html = '体验版'
+            break;
+          case '1':
+            html = '正式版本'
+            break;
+        }
       }
     }
   }

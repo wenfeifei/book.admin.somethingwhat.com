@@ -59,7 +59,7 @@ class UserLayout extends React.PureComponent {
                 <span className={styles.title}>{catConfig.projectName}</span>
               </Link>
             </div>
-            <div className={styles.desc}>[{catConfig.projectName}微信小程序] 后台管理系统登录</div>
+            <div className={styles.desc}>[{catConfig.projectName}] 微信小程序后台管理系统登录</div>
           </div>
           {children}
         </div>

@@ -1003,7 +1003,7 @@ i.antd-pro-components-global-header-index-trigger {
     top: 0;
     left: 0;
     .ant-menu-root {
-      overflow-y: auto;
+      // overflow-y: auto;
       height: ~'calc(100vh - @{nav-header-height})';
     }
   }
@@ -1323,71 +1323,101 @@ i.antd-pro-components-global-header-index-trigger {
 
 
 .antd-pro-pages-charts-chart-salesExtra {
-    display: inline-block;
-    margin-right: 24px;
-    a {
-        color: @text-color;
-        margin-left: 24px;
-        &:hover {
-            color: @primary-color;
-        }
-        &.antd-pro-pages-charts-chart-currentDate {
-            color: @primary-color;
-        }
+  display: inline-block;
+  margin-right: 24px;
+  a {
+    color: @text-color;
+    margin-left: 24px;
+    &:hover {
+      color: @primary-color;
     }
+    &.antd-pro-pages-charts-chart-currentDate {
+      color: @primary-color;
+    }
+  }
+  a.antd-pro-pages-charts-chart-active{
+    color: @primary-color;
+    font-weight: bold;
+  }
 }
 
 .antd-pro-pages-charts-chart-salesCard {
-    .antd-pro-pages-charts-chart-salesBar {
-        padding: 0 0 32px 32px;
+  .antd-pro-pages-charts-chart-salesBar {
+    padding: 0 0 32px 32px;
+  }
+  .antd-pro-pages-charts-chart-salesRank {
+    padding: 0 32px 32px 72px;
+  }
+    .ant-tabs-bar {
+      padding-left: 16px;
+      .ant-tabs-nav .ant-tabs-tab {
+        padding-top: 16px;
+        padding-bottom: 14px;
+        line-height: 24px;
+      }
     }
-    .antd-pro-pages-charts-chart-salesRank {
-        padding: 0 32px 32px 72px;
+    .ant-tabs-extra-content {
+      padding-right: 24px;
+      line-height: 55px;
     }
-        .ant-tabs-bar {
-            padding-left: 16px;
-            .ant-tabs-nav .ant-tabs-tab {
-                padding-top: 16px;
-                padding-bottom: 14px;
-                line-height: 24px;
-            }
-        }
-        .ant-tabs-extra-content {
-            padding-right: 24px;
-            line-height: 55px;
-        }
-        .ant-card-head {
-            position: relative;
-        }
+    .ant-card-head {
+      position: relative;
+    }
 }
 
 .antd-pro-pages-charts-chart-salesCardExtra {
-    height: 68px;
+  height: 68px;
 }
 
 @media screen and (max-width: @screen-sm) {
-    .antd-pro-pages-charts-chart-salesExtraWrap {
-        display: none;
-    }
-    .antd-pro-pages-charts-chart-salesCard {
-            .ant-tabs-content {
-                padding-top: 30px;
-            }
-    }
+  .antd-pro-pages-charts-chart-salesExtraWrap {
+    display: none;
+  }
+  .antd-pro-pages-charts-chart-salesCard {
+      .ant-tabs-content {
+        padding-top: 30px;
+      }
+  }
 }
 
 .antd-pro-pages-charts-chart-chart_card {
-        .ant-card-body {
-            padding: 0 !important;
-            padding-top: 20px;
-        }
-        h3 {
-            padding: 20px;
-        }
+    .ant-card-body {
+      padding: 0 !important;
+      padding-top: 20px;
+      min-height: 500px;
+    }
+    h3 {
+      padding: 20px 0 10px 10px;
+      font-size: 20px;
+    }
 }
 
 .antd-pro-pages-charts-chart-p20 {
-    padding: 20px;
+  padding: 20px;
+}
+
+.antd-pro-pages-charts-chart-table_noborder {
+    .ant-table-small {
+      border: none !important;
+    }
+}
+
+.antd-pro-pages-charts-chart-modal_analysis_info{
+    .t {
+      font-weight: bold;
+    }
+    h3 {
+    }
+}
+
+.antd-pro-pages-charts-chart-legend_bottom_title {
+  padding: 20px;
+  color: #666;
+}
+
+.antd-pro-pages-charts-chart-query_data {
+  padding-left: 20px;
+  color: #999;
 }
 .antd-pro-pages-exception-style-trigger {
   background: 'red';

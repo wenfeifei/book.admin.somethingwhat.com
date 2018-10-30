@@ -119,15 +119,15 @@ export default function request(
    * Produce fingerprints based on url and parameters
    * Maybe url has the same parameters
    */
-  if (url.indexOf('?') > 0) {
-    if (url.substr(-1) === '?')
-      url += `ver=${Math.random()}`
-    else
-      url += `&ver=${Math.random()}`
-  }
-  else {
-    url += `?ver=${Math.random()}`
-  }
+  // if (url.indexOf('?') > 0) {
+  //   if (url.substr(-1) === '?')
+  //     url += `ver=${Math.random()}`
+  //   else
+  //     url += `&ver=${Math.random()}`
+  // }
+  // else {
+  //   url += `?ver=${Math.random()}`
+  // }
   // console.info('url', url)
   const fingerprint = url + (options.body ? JSON.stringify(options.body) : '');
   const hashcode = hash
@@ -185,7 +185,7 @@ export default function request(
   }
   return fetch(url, newOptions)
     .then(checkStatus)
-    .then(response => cachedSave(response, hashcode))
+    //.then(response => cachedSave(response, hashcode)) // 框架BUG：当响应数据比较多时，会抛异常，所以这里先暂时注释
     .then(response => {
       // DELETE and 204 do not return data by default
       // using .json will report an error.

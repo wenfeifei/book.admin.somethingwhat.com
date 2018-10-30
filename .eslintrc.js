@@ -55,6 +55,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/prefer-stateless-function': 0,
     'no-param-reassign': 0,
+    'camelcase': 0,
   },
   settings: {
     polyfills: ['fetch', 'promises', 'url'],

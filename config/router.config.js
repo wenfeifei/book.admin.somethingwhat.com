@@ -16,7 +16,7 @@ export default [
     authority: ['administrator', 'guest'],
     routes: [
       // 默认页
-      { path: '/', redirect: '/chart/user' },
+      { path: '/', redirect: '/analysis/dailysummary' },
       // 数据列表
       {
         name: 'book',
@@ -77,6 +77,50 @@ export default [
             icon: 'api',
             path: '/book/sys-interface-record',
             component: './Book/SysInterfaceRecord/TableList',
+          },
+        ],
+      },
+      // 微信数据分析
+      {
+        name: 'analysis',
+        icon: 'bar-chart',
+        path: '/analysis',
+        routes: [
+          {
+            name: 'dailysummary',
+            icon: 'bar-chart',
+            path: '/analysis/dailysummary',
+            component: './Analysis/DailySummary',
+          },
+          {
+            name: 'visittrend',
+            icon: 'line-chart',
+            path: '/analysis/visittrend',
+            component: './Analysis/VisitTrend',
+          },
+          {
+            name: 'visitretain',
+            icon: 'stock',
+            path: '/analysis/visitretain',
+            component: './Analysis/VisitRetain',
+          },
+          {
+            name: 'userportrait',
+            icon: 'radar-chart',
+            path: '/analysis/userportrait',
+            component: './Analysis/UserPortrait',
+          },
+          {
+            name: 'visitdistribution',
+            icon: 'radar-chart',
+            path: '/analysis/visitdistribution',
+            component: './Analysis/VisitDistribution',
+          },
+          {
+            name: 'visitpage',
+            icon: 'radar-chart',
+            path: '/analysis/visitpage',
+            component: './Analysis/VisitPage',
           },
         ],
       },

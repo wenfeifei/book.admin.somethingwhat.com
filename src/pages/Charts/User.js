@@ -49,10 +49,10 @@ class Groupedcolumn extends Component {
               <Tabs size="large" tabBarStyle={{ marginBottom: 0 }}>
                 <TabPane tab="用户画像" key="sales">
                   <Row gutter={16}>
-                    <Col span={12}>
+                    {/* <Col span={12}>
                       <h3>男女占比</h3>
                       <UserSex />
-                    </Col>
+                    </Col> */}
                     <Col span={12}>
                       <h3>僵尸粉占比</h3>
                       <UserActive />

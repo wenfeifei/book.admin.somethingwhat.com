@@ -14,12 +14,12 @@ let routes = [
   },
   {
     "path": "/index.html",
-    "redirect": "/chart/user",
+    "redirect": "/analysis/dailysummary",
     "exact": true
   },
   {
     "path": "/",
-    "redirect": "/chart/user",
+    "redirect": "/analysis/dailysummary",
     "exact": true
   },
   {
@@ -116,6 +116,58 @@ let routes = [
             "icon": "api",
             "path": "/book/sys-interface-record.html",
             "component": dynamic({ loader: () => import('../Book/SysInterfaceRecord/TableList'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
+            "exact": true
+          },
+          {
+            "component": () => React.createElement(require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
+          }
+        ]
+      },
+      {
+        "name": "analysis",
+        "icon": "bar-chart",
+        "path": "/analysis(.html)?",
+        "routes": [
+          {
+            "name": "dailysummary",
+            "icon": "bar-chart",
+            "path": "/analysis/dailysummary.html",
+            "component": dynamic({ loader: () => import('../Analysis/DailySummary'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
+            "exact": true
+          },
+          {
+            "name": "visittrend",
+            "icon": "line-chart",
+            "path": "/analysis/visittrend.html",
+            "component": dynamic({ loader: () => import('../Analysis/VisitTrend'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
+            "exact": true
+          },
+          {
+            "name": "visitretain",
+            "icon": "stock",
+            "path": "/analysis/visitretain.html",
+            "component": dynamic({ loader: () => import('../Analysis/VisitRetain'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
+            "exact": true
+          },
+          {
+            "name": "userportrait",
+            "icon": "radar-chart",
+            "path": "/analysis/userportrait.html",
+            "component": dynamic({ loader: () => import('../Analysis/UserPortrait'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
+            "exact": true
+          },
+          {
+            "name": "visitdistribution",
+            "icon": "radar-chart",
+            "path": "/analysis/visitdistribution.html",
+            "component": dynamic({ loader: () => import('../Analysis/VisitDistribution'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
+            "exact": true
+          },
+          {
+            "name": "visitpage",
+            "icon": "radar-chart",
+            "path": "/analysis/visitpage.html",
+            "component": dynamic({ loader: () => import('../Analysis/VisitPage'), loading: require('D:/05.wechat/01.小程序/01.喵喵看书-v2.0.1/03.中后台/book.admin.somethingwhat.com/src/components/PageLoading/index').default  }),
             "exact": true
           },
           {
