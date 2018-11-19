@@ -162,6 +162,11 @@ class TableList extends Component {
         key: 'OutTradeNo',
       },
       {
+        title: '预支付id',
+        dataIndex: 'PrepayId',
+        key: 'PrepayId',
+      },
+      {
         title: 'Body',
         dataIndex: 'Body',
         key: 'Body',
@@ -196,13 +201,13 @@ class TableList extends Component {
         width: 120,
         sorter: true,
       },
-      {
-        title: '更新时间',
-        dataIndex: 'Update_Time',
-        key: 'Update_Time',
-        width: 120,
-        sorter: true,
-      },
+      // {
+      //   title: '更新时间',
+      //   dataIndex: 'Update_Time',
+      //   key: 'Update_Time',
+      //   width: 120,
+      //   sorter: true,
+      // },
     ];
     this.setState({ columns: tempColumns });
   };

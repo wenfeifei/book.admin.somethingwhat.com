@@ -46,8 +46,8 @@ class Donut extends React.Component {
 
   componentWillMount() {
     const { rangePickerValue } = this.state;
-    const startDate = rangePickerValue[0].add(-6, 'months')
-    const endDate = rangePickerValue[1].add(-1, 'months')
+    const startDate = rangePickerValue[0].add(-6, 'months').startOf('month')
+    const endDate = rangePickerValue[1].add(-1, 'months').endOf('month')
     this.setState({ curSelectedDate: [startDate.format('YYYY-MM-DD'), endDate.format('YYYY-MM-DD')] })
   };
 
